@@ -1,63 +1,57 @@
----
-layout: post
-title: iOS开发中的小问题记录
-date: 2016-12-02 
-tag: iOS
----
-
-### NSKeyedArchiver 自定义对象写文件
-
-
-如果存储的对象类名有变动，则需要设置clasName, 方法为：“setClassName:forClass:”        
-使用 NSKeyedArchiver 进行数据持久化时, 系统会默认使用类名去建表，如果类名变了，那么使用新的类名肯定是从本地获取不到表的，代码执行崩溃。     
-所以需要在 NSKeyedArchiver 或者 NSKeyedUnarchiver 时使用 “setClassName:forClass:” 指定类名。 
-
-
-### 断点配置：【Generate Debug Symbols】     
-
-描述: 用来控制断点是否生效,关闭此功能，打包 `.ipa` 时，包体积会小很多。    
-配置路径:【project/TARGETS/Build Settings/Apple LLVM7.1 - Code Genneration/Generate Debug Symbols】    
-
-
-### 捕获全局异常：【All Exception】    
-
-描述: 用来捕捉整个项目在 Xcode 里执行时的异常。例如：try/catch 时 catch住的异常,【All Exception】可以直接定位到具体位置。     
-配置路径: 异常捕捉(commod+7)/Xcode左下角点击+/Add Exception Breakpoint/完成(回车键)  
-
-
-### UI相关
-
-1、设置状态栏颜色：
-
-```
-
-info.plist 添加 View controller-based status bar appearance - NO     
-代码里写 [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent]; 再次运行后状态栏就会变成白色。    
-
-```
-
-2、左滑返回手势失效了怎么办：   
-
-```    
-
-设置 navigationItem.leftBarButtonItem 之后，左滑返回手势就会失效。设置一下 UIGestureRecognizerDelegate 代理即可：
-
-self.navigationController.interactivePopGestureRecognizer.delegate = self;
-
-```
-
-3、让 TableView的 下拉 和 上拉 显示不一样的背景颜色：
-
-```
-
-给 TableView 上加一个 View，View 的 Frema：
-CGRectMake(0, -self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height + 2)，
-给变View的背景颜色就可以了。
-
-```
-
-
-<br>
-转载请注明：[潘柏信的博客](http://baixin) » [iOS开发中的小问题记录](http://baixin.io/2016/12/iOS_Dev_Note/)  
-
-
+# markdown 
+|按键|作用|
+|:---:|:---:|
+|h|光标右移|
+|j|光标下移|
+|k|光标上移|
+|l|光标左移|
+|Ctrl+f|向下移动一页|
+|Ctrl+b|向上移动一页|
+|Ctrl+d|向下移动半页|
+|Ctrl+u|向上移动半页|
+|+|光标移动到非空格符的下一行|
+|-|光标移动到非空格符的上一行|
+|n+空格|n 表示『数字』光标会向右移动这一行的 n 个字符|
+|0|移动到这一行的最前面字符处|
+|$|移动到这一行的最后面字符处|
+|H|光标移动到这个屏幕的最上方那一行的第一个字符|
+|M|光标移动到这个屏幕的中央那一行的第一个字符|
+|L|光标移动到这个屏幕的最下方那一行的第一个字符|
+|G|移动到这个档案的最后一行|
+|nG|n 为数字。移动到这个档案的第 n 行|
+|gg|移动到这个档案的第一行|
+|n+回车|n 为数字。光标向下移动 n 行|
+|/word|向光标之下寻找一个名称为 word 的字符串|
+|?word|向光标之上寻找一个字符串名称为 word 的字符串|
+|n|重复前一个搜寻的动作|
+|N|与 n 刚好相反|
+|:n,ns/word1/word2/g|n1 与 n2 为数字。在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 |
+|:1,$s/word1/word2/g|从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 ！|
+|:%s/word1/word2/g|同上|
+|:1,$s/word1/word2/gc|同上只是多加了个确认是否替换|
+|%s/word1/word2/gc|同上|
+|x，X|x 为向后删除一个字符， X 为向前删除一个字符|
+|nx|n 为数字，连续向后删除 n 个字符|
+|dd|删除游标所在的那一整行|
+|ndd|n 为数字。删除光标所在的向下 n 行|
+|yy|复制游标所在的那一行|
+|nyy|n 为数字。复制光标所在的向下 n 行|
+|p,P|粘贴，一个上一行一个下一行|
+|c|重复删除多个数据，例如向下删除 10 行|
+|u|撤销|
+|Ctrl+r|取消撤销|
+|i，I|i光标所在处输入，I 行的第一个非空格符处开始输入|
+|a,A|a 为光标所在的下一个字符处开始输入，A为所在行的最后一个字符处开始输入|
+|o，O|一个上一行一个下一行，输入一个新的一行|
+|r，R|r取代一个字符一次，R取代字符知道按Esc|
+|:w|保存|
+|:w!|强制保存|
+|:q|退出|
+|:q!|强制退出|
+|:wq|保存离开|
+|ZZ|档案没有更动，则不储存离开，已经被更动过，则储存后离开|
+|:w 文件名|另存为|
+|:r 文件名|导入|
+|:n1,n2 w 文件名|截取另存为|
+|:set nu|显示行号|
+|:set nonu|取消行号|
