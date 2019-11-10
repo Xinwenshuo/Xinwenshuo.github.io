@@ -9,8 +9,12 @@ tags: 命令
 
 ## vim基础命令  
 
-  
+
 Vi是所有Unix和linux系统下标准的编辑器，类似于Windows系统下的notepad（记事本）编辑器.  
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 
@@ -76,7 +80,7 @@ Vi是所有Unix和linux系统下标准的编辑器，类似于Windows系统下�
 
 
 
-  
-    
+
+​    
 转载请注明：[辛文硕的博客](http://baixin) » [Linux/Vim命令](http://baidu.com/)                   
 
