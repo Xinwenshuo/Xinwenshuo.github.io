@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Markdown
-date: 2016-11-20 
-tags: 工具    
+date: 2019-11-10 
+tags: 命令    
 ---
 
 
@@ -76,5 +76,5 @@ css 的大部分语法同样可以在 markdown 上使用，但不同的渲染器
 
 <br>
 
-转载请注明：[潘柏信的博客](http://baixin) » [Markdown工具集](http://baixin.io/2016/11/markdownTool/)                   
+转载请注明：[辛文硕的博客](http://baixin) » [Markdown命令](http://baidu.com/)                   
 
