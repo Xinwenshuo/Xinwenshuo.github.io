@@ -1,16 +1,16 @@
 ---
 layout: post
-title: VimHub
+title: Linux/Vim
 date: 2019-11-10 
 tags: 命令    
 ---
 
-# VimHub
+# Linux/Vim
 
 ## vim基础命令  
 
   
-  
+Vi是所有Unix和linux系统下标准的编辑器，类似于Windows系统下的notepad（记事本）编辑器.  
 
 
 
@@ -73,3 +73,10 @@ tags: 命令
 |:n1,n2 w 文件名|截取另存为|
 |:set nu|显示行号|
 |:set nonu|取消行号|
+
+
+
+  
+    
+转载请注明：[辛文硕的博客](http://baixin) » [Linux/Vim命令](http://baidu.com/)                   
+
