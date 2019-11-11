@@ -21,7 +21,7 @@ tags: 简历
    <td>年龄:</td>
     <td>20岁</td>
      <td rowspan="2" width="20px" style="line-height:45px"> 头 像</td>
-    <td rowspan="2" width="100px"><img src="./touxiang.jpg" width="70px"></td> 
+    <td rowspan="2" width="100px">不让看</td> 
 </tr>
 <tr>
     <td>学历:</td>
